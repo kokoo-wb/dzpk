@@ -1,0 +1,139 @@
+.tabs {
+    width: 1000px;
+    margin-left: 60px;
+    border-bottom: 1px solid #e8e8e8;
+    color: #999;
+    font-size: 16px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.tabs li {
+    height: 42px;
+    line-height: 42px;
+    float: left;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.tabs li.active {
+    color: #49a7fe;
+    border-bottom: 3px solid #49a7fe;
+}
+
+.pay-coin {
+    margin: 50px 60px;
+}
+
+.pay-record {
+    display: none;
+    margin: 40px 60px;
+}
+
+.my-coin span:last-child {
+    margin-left: 40px;
+}
+
+.pay-way-list {
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.pay-way-list li {
+    text-align: center;
+    width: 140px;
+    height: 96px;
+    border: 1px solid #49a7fe;
+    color: #49a7fe;
+    float: left;
+    font-size: 20px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+.pay-way-list li p:first-child {
+    margin-top: 25px;
+}
+
+.pay-way-list li p:last-child {
+    margin-top: 7px;
+    font-size: 14px;
+    color: #999;
+}
+
+.pay-way-list li.active {
+    background: #49a7fe;
+}
+
+.pay-way-list li.active p {
+    color: #fff;
+}
+
+.should-pay {
+    margin-top: 20px;
+}
+
+.should-pay-money {
+    font-size: 26px;
+    color: #49a7fe;
+    margin-left: 40px;
+}
+
+.pay-way {
+    overflow: hidden;
+    margin-top: 33px;
+}
+
+.pay-way span {
+    float: left;
+    line-height: 54px;
+    margin-right: 20px;
+}
+
+.pay-way a {
+    display: block;
+    width: 160px;
+    height: 54px;
+    float: left;
+    border: 1px solid #e8e8e8;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -o-border-radius: 6px;
+    position: relative;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.pay-way a.active {
+    border: 1px solid #49a7fe;
+}
+
+.pay-way a img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.submit-btn {
+    display: block;
+    width: 140px;
+    height: 46px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -o-border-radius: 6px;
+    line-height: 46px;
+    text-align: center;
+    color: #fff;
+    background: #49a7fe;
+    font-size: 16px;
+    margin-top: 60px;
+    cursor: pointer;
+}

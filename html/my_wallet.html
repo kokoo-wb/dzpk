@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>我的钱包</title>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/manage_layout.css" />
+    <link rel="stylesheet" href="../css/my_wallet.css" />
+
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">LOGO</div>
+            <ul class="menu">
+                <li>德州扑克</li>
+                <li>首页</li>
+            </ul>
+            <div class="login-info">
+                <img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1590662363,713073460&fm=27&gp=0.jpg" />
+                <span>admin</span>
+                <a>退出</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="personal_msg.html">
+                        <span>个人资料</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="vip_center.html">
+                        <span>会员中心</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="active" href="my_wallet.html">
+                        <span>我的钱包</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="about_us.html">
+                        <span>关于我们</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <ul class="tabs">
+                <li class="active">会员充值</li>
+                <li>消费记录</li>
+            </ul>
+
+            <div class="tab-box pay-coin">
+                <div class="my-coin">
+                    <span>我的金币</span>
+                    <span>500</span>
+                </div>
+
+                <ul class="pay-way-list">
+                    <li class="active">
+                        <p>10金币</p>
+                        <p>￥10</p>
+                    </li>
+                    <li>
+                        <p>50金币</p>
+                        <p>￥20</p>
+                    </li>
+                    <li>
+                        <p>100金币</p>
+                        <p>￥55</p>
+                    </li>
+                    <li>
+                        <p>300金币</p>
+                        <p>￥100</p>
+                    </li>
+                    <li>
+                        <p>500金币</p>
+                        <p>￥200</p>
+                    </li>
+                    <li>
+                        <p>800金币</p>
+                        <p>￥20</p>
+                    </li>
+                    <li>
+                        <p>1000金币</p>
+                        <p>￥20</p>
+                    </li>
+                    <li>
+                        <p>1500金币</p>
+                        <p>￥55</p>
+                    </li>
+                    <li>
+                        <p>2000金币</p>
+                        <p>￥100</p>
+                    </li>
+                    <li>
+                        <p>5000金币</p>
+                        <p>￥200</p>
+                    </li>
+                </ul>
+
+                <div class="should-pay">
+                    <span>支付金额</span>
+                    <span class="should-pay-money">50</span>
+                    <span>元</span>
+                </div>
+
+                <div class="pay-way">
+                    <span>支付方式</span>
+                    <a class="active">
+                        <img src="../images/zfb_pay.png" />
+                    </a>
+                    <a>
+                        <img src="../images/weixin_pay.png" />
+                    </a>
+                </div>
+
+                <a class="submit-btn">立即充值</a>
+            </div>
+
+            <div class="tab-box pay-record">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>时间</th>
+                            <th>消费类型</th>
+                            <th>消费金额(元)</th>
+                            <th>消费金币</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2018/06/26 14:00</td>
+                            <td>金币充值</td>
+                            <td>-</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>2018/06/26 14:00</td>
+                            <td>礼物打赏</td>
+                            <td>1000.0</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>2018/06/26 14:00</td>
+                            <td>金币充值</td>
+                            <td>-</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>2018/06/26 14:00</td>
+                            <td>礼物打赏</td>
+                            <td>1000.0</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>2018/06/26 14:00</td>
+                            <td>金币充值</td>
+                            <td>-</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>2018/06/26 14:00</td>
+                            <td>礼物打赏</td>
+                            <td>1000.0</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>2018/06/26 14:00</td>
+                            <td>金币充值</td>
+                            <td>0</td>
+                            <td>10</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="../lib/jquery/jquery-3.2.1.min.js"></script>
+<script>
+    $('.tabs li').click(function() {
+        $('.tabs li').removeClass('active');
+        $(this).addClass('active');
+        if ($(this).index() == 0) {
+            $('.tab-box').hide();
+            $('.pay-coin').show();
+        }
+        if ($(this).index() == 1) {
+            $('.tab-box').hide();
+            $('.pay-record').show();
+        }
+    });
+
+    $('.pay-way-list li').click(function() {
+        $('.pay-way-list li').removeClass('active');
+        $(this).addClass('active');
+    });
+
+    $('.pay-way a').click(function() {
+        $('.pay-way a').removeClass('active');
+        $(this).addClass('active');
+    });
+</script>
+
+</html>

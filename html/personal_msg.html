@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>服务与隐私条例</title>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/manage_layout.css" />
+    <link rel="stylesheet" href="../css/personal_msg.css" />
+
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">LOGO</div>
+            <ul class="menu">
+                <li>德州扑克</li>
+                <li>首页</li>
+            </ul>
+            <div class="login-info">
+                <img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1590662363,713073460&fm=27&gp=0.jpg" />
+                <span>admin</span>
+                <a>退出</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a class="active" href="personal_msg.html">
+                        <span>个人资料</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="vip_center.html">
+                        <span>会员中心</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="my_wallet.html">
+                        <span>我的钱包</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="about_us.html">
+                        <span>关于我们</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <ul class="tabs">
+                <li class="active">基本信息</li>
+                <li>修改头像</li>
+                <li>修改密码</li>
+            </ul>
+
+            <div class="msg-box basic">
+                <div class="form-item">
+                    <label>账号</label>
+                    <div class="form-right">
+                        <span>15914334567</span>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label>昵称</label>
+                    <div class="form-right">
+                        <input placeholder="请输入昵称" />
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label>性别</label>
+                    <div class="form-right">
+                        <div class="radio-box">
+                            <div class="radio-item radio-item-check" data="male"></div>
+                            <span>男</span>
+                        </div>
+                        <div class="radio-box">
+                            <div class="radio-item" data="female"></div>
+                            <span>女</span>
+                        </div>
+                        <div class="radio-box">
+                            <div class="radio-item" data="secret"></div>
+                            <span>保密</span>
+                        </div>
+                        <input class="gender-radio" id="male" type="radio" name="gender" value="male" />
+                        <input class="gender-radio" id="female" type="radio" name="gender" value="female" />
+                        <input class="gender-radio" id="secret" type="radio" name="gender" value="secret" />
+                    </div>
+                </div>
+
+                <a class="save-btn">保存修改</a>
+            </div>
+
+            <div class="msg-box change-headimg">
+                <div class="form-item">
+                    <label>头像</label>
+                    <div class="form-right">
+                        <a class="upload-btn">上传文件</a>
+                        <span class="upload-tip" accept="image/jpg,image/png,image/jpeg">（（只支持jpg、png、jpeg格式,文件不超过2MB））</span>
+                        <input class="file-input" type="file" />
+                    </div>
+                </div>
+                <img class="img-preview" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1590662363,713073460&fm=27&gp=0.jpg" />
+
+                <a class="save-btn">保存修改</a>
+            </div>
+
+            <div class="msg-box change-password">
+                <div class="form-item">
+                    <label>账号</label>
+                    <div class="form-right">
+                        <span>15914334567</span>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label>输入验证码</label>
+                    <div class="form-right">
+                        <input placeholder="请输入短信验证码" class="validate-input" />
+                        <a class="validate-btn">获取验证码</a>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label>输入新密码</label>
+                    <div class="form-right">
+                        <input type="password" placeholder="请输入新密码" />
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label>确认新密码</label>
+                    <div class="form-right">
+                        <input type="password" placeholder="请再次输入新密码" />
+                    </div>
+                </div>
+
+                <a class="save-btn">保存修改</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="../lib/jquery/jquery-3.2.1.min.js"></script>
+<script>
+    $('.tabs li').click(function() {
+        $('.tabs li').removeClass('active');
+        $(this).addClass('active');
+        if ($(this).index() == 0) {
+            $('.msg-box').hide();
+            $('.basic').show();
+        }
+        if ($(this).index() == 1) {
+            $('.msg-box').hide();
+            $('.change-headimg').show();
+        }
+        if ($(this).index() == 2) {
+            $('.msg-box').hide();
+            $('.change-password').show();
+        }
+    });
+
+    $('.radio-item').click(function() {
+        $('.radio-item').removeClass('radio-item-check');
+        $(this).addClass('radio-item-check');
+        $('#' + $(this).attr('data')).attr('checked', true);
+    });
+
+    $('.upload-btn').click(function() {
+        $('.file-input').click();
+    });
+</script>
+
+</html>

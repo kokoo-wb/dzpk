@@ -1,0 +1,118 @@
+.header {
+    height: 80px;
+    max-width: 100%;
+    background: #fff;
+}
+
+.header-content {
+    height: 80px;
+    width: 1260px;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 160px;
+    height: 90px;
+    background: #49a7fe;
+    color: #fff;
+    float: left;
+    font-size: 34px;
+    text-align: center;
+    line-height: 90px;
+}
+
+.menu {
+    height: 80px;
+    float: left;
+    margin-left: 15px;
+}
+
+.menu li {
+    font-size: 16px;
+    height: 80px;
+    padding: 0 15px;
+    float: left;
+    line-height: 80px;
+}
+
+.login-info {
+    font-size: 16px;
+    float: right;
+    height: 80px;
+    line-height: 80px;
+}
+
+.login-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -o-border-radius: 50px;
+    -moz-border-radius: 50px;
+    float: left;
+    margin-top: 20px;
+    margin-right: 7px;
+}
+
+.login-info span {
+    color: #2da9dd;
+    margin-right: 28px;
+}
+
+.container {
+    width: 1200px;
+    background: #fff;
+    margin: 40px auto 20px auto;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 140px;
+    min-height: 200px;
+    float: left;
+    font-size: 16px;
+}
+
+.sidebar li a {
+    display: block;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    color: #666;
+}
+
+.sidebar li a.active {
+    box-shadow: 0 0 10px #49a7fe;
+    background: #49a7fe;
+    color: #fff;
+}
+
+.sidebar li a span {
+    position: relative;
+    margin-right: 20px;
+}
+
+.sidebar li a span::after {
+    content: ' ';
+    position: absolute;
+    width: 8px;
+    height: 14px;
+    right: -24px;
+    background-image: url('../images/arrow_right_black.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.sidebar li a.active span::after {
+    background-image: url('../images/arrow_right_white.png');
+}
+
+.content {
+    width: 1060px;
+    min-height: 800px;
+    box-sizing: border-box;
+    border-left: 1px solid #e8e8e8;
+    float: left;
+}

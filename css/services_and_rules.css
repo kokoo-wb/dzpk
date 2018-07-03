@@ -1,0 +1,14 @@
+.rules-header {
+    height: 70px;
+    border-bottom: 1px solid #e8e8e8;
+    font-size: 18px;
+    text-align: center;
+    line-height: 70px;
+}
+
+.rules-content {
+    min-height: 70px;
+    padding: 40px 56px;
+    color: #999;
+    line-height: 27px;
+}
