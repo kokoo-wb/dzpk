@@ -1,0 +1,472 @@
+.live-box-content {
+    overflow: hidden;
+}
+
+.live-box-left {
+    width: 960px;
+    float: left;
+    background: #fff;
+    height: 790px;
+}
+
+.live-header {
+    width: 960px;
+    border-bottom: 1px solid #e8e8e8;
+    background: #fff;
+    height: 80px;
+}
+
+.live-headimg {
+    float: left;
+    height: 60px;
+    width: 60px;
+    border: 1px solid #e8e8e8;
+    border-radius: 100px;
+    margin: 8px 0 0 20px;
+}
+
+.live-title-box {
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.live-title {
+    overflow: hidden;
+}
+
+.live-title p {
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 20px;
+    margin-left: 10px;
+    width: 600px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.live-title span {
+    background: #fe8949;
+    color: #fff;
+    float: left;
+    padding: 0 5px;
+    border-radius: 4px;
+    display: block;
+    height: 20px;
+    line-height: 20px;
+}
+
+.live-viewer {
+    color: #999;
+    font-size: 12px;
+    line-height: 1em;
+    margin-top: 6px;
+}
+
+.live-op-btn {
+    float: right;
+    margin-top: 25px;
+    overflow: hidden;
+    margin-right: 20px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.live-op-btn a:first-child {
+    width: 50px;
+    height: 30px;
+    display: block;
+    float: left;
+    border: 1px solid #49a7fe;
+    margin-left: 10px;
+    border-radius: 4px;
+    color: #fff;
+    background: linear-gradient(to top, #49a7fe, #fff);
+}
+
+.live-op-btn a:last-child {
+    width: 50px;
+    height: 30px;
+    display: block;
+    float: left;
+    border: 1px solid #49a7fe;
+    color: #49a7fe;
+    margin-left: 10px;
+    border-radius: 4px;
+}
+
+.live-video {
+    width: 960px;
+    border-bottom: 1px solid #e8e8e8;
+    height: 608px;
+    background: #000;
+}
+
+.live-video video {
+    width: 100%;
+    height: 100%;
+}
+
+.live-gift {
+    width: 960px;
+    border-bottom: 1px solid #e8e8e8;
+    height: 608px;
+    background: #fff;
+    height: 100px;
+}
+
+.gift-list {
+    float: left;
+    margin-left: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+    width: 870px;
+    white-space: nowrap;
+}
+
+.gift-list li {
+    height: 60px;
+    width: 60px;
+    box-sizing: border-box;
+    float: left;
+    background: #f7f7f7;
+    position: relative;
+    border-radius: 4px;
+    margin: 0 11px;
+}
+
+.gift-list li.active {
+    border: 1px solid #fe8949;
+    background: #fff;
+}
+
+.gift-list li img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.send-gift-btn {
+    margin-top: 36px;
+    margin-right: 20px;
+    width: 46px;
+    height: 28px;
+    display: block;
+    float: right;
+    background: #fe8949;
+    color: #fff;
+    margin-left: 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 28px;
+}
+
+.live-box-right {
+    width: 290px;
+    float: right;
+}
+
+.gift-send-rank-box {
+    width: 290px;
+    background: #fff;
+    height: 364px;
+}
+
+.right-title {
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background: #f7f7f7;
+    font-size: 16px;
+}
+
+.rank-list {
+    padding: 7px 20px;
+}
+
+.rank-list li {
+    overflow: hidden;
+    height: 60px;
+}
+
+.rank-num {
+    float: left;
+    border: 1px solid #49a7fe;
+    color: #49a7fe;
+    border-radius: 100px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    margin-top: 18px;
+}
+
+.rank-list li:nth-child(1) .rank-num {
+    background: #fe8949;
+    color: #fff;
+    border: 1px solid #fe8949;
+}
+
+.rank-list li:nth-child(2) .rank-num {
+    background: #fed649;
+    color: #fff;
+    border: 1px solid #fed649;
+}
+
+.rank-list li:nth-child(3) .rank-num {
+    background: #49a7fe;
+    color: #fff;
+    border: 1px solid #49a7fe;
+}
+
+.rank-list li img {
+    float: left;
+    height: 46px;
+    width: 46px;
+    border: 1px solid #e8e8e8;
+    border-radius: 100px;
+    margin: 6px 5px 0 16px;
+}
+
+.rank-list li span {
+    line-height: 60px;
+    display: block;
+    width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: left;
+}
+
+.chat-box {
+    width: 290px;
+    background: #fff;
+    height: 416px;
+    margin-top: 10px;
+}
+
+.chat-list {
+    font-size: 16px;
+    font-size: 12px;
+    word-break: break-all;
+    position: relative;
+}
+
+.chat-list ul {
+    height: 318px;
+    padding: 10px 0;
+    color: #666;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.chat-list ul li {
+    overflow: hidden;
+    line-height: 17px;
+    padding: 0 20px;
+    margin-bottom: 8px;
+}
+
+.chat-list ul li:last-child {
+    margin-bottom: 0;
+}
+
+.chat-username {
+    float: left;
+    color: #49a7fe;
+}
+
+.chat-user-vip {
+    float: left;
+    position: relative;
+    top: 2px;
+    margin-left: 5px;
+}
+
+.chat-split {
+    color: #49a7fe;
+    margin-right: 5px;
+}
+
+.send-gift-message-box {
+    position: absolute;
+    background: #fff;
+    top: 10px;
+    width: 265px;
+    border: 1px solid #fe8f52;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 56px;
+    border-radius: 8px;
+    box-shadow: 0 10px 10px rgba(205, 52, 39, 0.2)
+}
+
+.send-gift-msg {
+    float: left;
+    margin-top: 12px;
+    margin-left: 20px;
+}
+
+.send-gift-img {
+    float: right;
+    background: #f7f7f7;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.send-username {
+    overflow: hidden;
+}
+
+.send-username span {
+    float: left;
+    color: #ff993d;
+    font-weight: bold;
+}
+
+.send-gift-name span:first-child {
+    color: #999;
+    margin-right: 3px;
+}
+
+.send-gift-name span:last-child {
+    color: #ff993d;
+    margin-right: 3px;
+}
+
+.send-gift-img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.chat-form {
+    height: 48px;
+    text-align: center;
+    background: #f7f7f7;
+    padding-top: 9px;
+}
+
+.chat-form input {
+    height: 28px;
+    border: 1px solid #ddd;
+    outline: none;
+    width: 190px;
+    padding: 0 10px;
+    float: left;
+    margin-left: 10px;
+}
+
+.chat-form a {
+    display: block;
+    color: #fff;
+    background: #49a7fe;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    width: 50px;
+    margin-left: 10px;
+}
+
+.theme-split {
+    margin-top: 100px;
+    width: 100%;
+}
+
+.live-preview-list {
+    overflow: hidden;
+    margin-top: 57px;
+}
+
+.live-preview-list li {
+    float: left;
+    overflow: hidden;
+    margin-right: 69px;
+}
+
+.live-preview-list li:last-child {
+    margin-right: 0;
+}
+
+.live-pre-img {
+    float: left;
+    background-image: url('../images/home_pic_video_round.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 110px;
+    height: 110px;
+    position: relative;
+}
+
+.live-preview-list li.active .live-pre-img {
+    background-image: url('../images/home_pic_video_blue.png');
+}
+
+.live-pre-img img {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.live-pre-msg {
+    float: left;
+    width: 133px;
+    margin-left: 20px;
+}
+
+.live-pre-msg p:first-child {
+    color: #fff;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.live-preview-list li.active .live-pre-msg p:first-child {
+    color: #49a7fe;
+}
+
+.live-pre-msg p:last-child {
+    color: #435061;
+    font-size: 12px;
+    line-height: 20px;
+    margin-top: 10px;
+}
+
+.game-box {
+    margin: 73px auto;
+    width: 1120px;
+    height: 330px;
+    background-image: url('../images/home_pic_box.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.game-msg {
+    position: absolute;
+    right: 135px;
+    bottom: 100px;
+    text-align: center;
+    width: 525px;
+    font-size: 16px;
+}
+
+.game-time {
+    color: #9badc8;
+}
+
+.game-intro {
+    color: #5b6678;
+    margin-top: 20px;
+}
