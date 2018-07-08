@@ -41,6 +41,7 @@ body {
     line-height: 80px;
 }
 
+.no-login-info,
 .login-info {
     font-size: 16px;
     float: right;
@@ -48,6 +49,7 @@ body {
     line-height: 80px;
 }
 
+.no-login-info img,
 .login-info img {
     width: 40px;
     height: 40px;
@@ -63,6 +65,22 @@ body {
 .login-info span {
     color: #2da9dd;
     margin-right: 28px;
+}
+
+.open-login-btn {
+    color: #2da9dd;
+}
+
+.no-login-info a {
+    cursor: pointer;
+}
+
+.open-login-btn span {
+    font-weight: bold;
+    font-size: 14px;
+    position: relative;
+    bottom: 2px;
+    margin: 0 5px;
 }
 
 .container {

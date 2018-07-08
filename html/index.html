@@ -19,10 +19,21 @@
                 <li>德州扑克</li>
                 <li>首页</li>
             </ul>
-            <div class="login-info">
+            <!-- 已登录状态 -->
+            <!-- <div class="login-info">
                 <img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1590662363,713073460&fm=27&gp=0.jpg" />
                 <span>admin</span>
                 <a>退出</a>
+            </div> -->
+
+            <!-- 未登录状态 -->
+            <div class="no-login-info">
+                <img src="../images/no_login.png" />
+                <span class="open-login-btn">
+                    <a>登录</a>
+                    <span>|</span>
+                </span>
+                <a class="open-regist-btn">注册</a>
             </div>
         </div>
     </div>
@@ -40,7 +51,7 @@
                     </div>
                     <div class="live-op-btn">
                         <a>下载</a>
-                        <a>分享</a>
+                        <a class="share-btn">分享</a>
                     </div>
                 </div>
                 <div class="live-video">
@@ -185,6 +196,10 @@
                                 <span>666</span>
                             </li>
                         </ul>
+
+                        <!-- 没开通vip时候的提示 -->
+                        <!-- <div class="no-vip-tip">请开通会员后参与本次的直播交流</div> -->
+
                         <div class="send-gift-message-box">
                             <div class="send-gift-msg">
                                 <p class="send-username">
@@ -204,7 +219,7 @@
 
                     <div class="chat-form">
                         <input placeholder="请输入" />
-                        <a>发布</a>
+                        <a class="send-msg-btn">发布</a>
                     </div>
                 </div>
             </div>
@@ -261,6 +276,351 @@
             </div>
         </div>
     </div>
+
+    <div class="modal" id="forgetpassword">
+        <div class="error-msg">
+            <img src="../images/icon_jinb3.png" />
+            <span>请输入您的手机号</span>
+        </div>
+
+        <!-- 忘记密码 -->
+        <div class="input-forget-password">
+            <ul class="regist-way-menu">
+                <li class="active">忘记密码</li>
+            </ul>
+
+            <div class="phone-input">
+                <img src="../images/phone.png" />
+                <input type="text" placeholder="请输入登录账号" />
+            </div>
+
+            <div class="validate-input-box">
+                <div class="validate-input">
+                    <img src="../images/safe.png" />
+                    <input type="text" placeholder="请输入您的验证码" />
+                </div>
+                <a class="validate-num-btn">获取验证码</a>
+            </div>
+
+            <div class="password-input">
+                <img src="../images/lock.png" />
+                <input type="password" placeholder="请输入新密码(6-30位且不含数字)" />
+            </div>
+
+            <div class="password-input">
+                <img src="../images/lock.png" />
+                <input type="password" placeholder="请输入新密码(6-30位且不含数字)" />
+            </div>
+
+            <div class="goto-regist-box">
+                <p>
+                    <span>记得密码</span>
+                    <a class="goto-login-box">直接登录</a>
+                </p>
+            </div>
+
+            <a class="login-btn">重置密码</a>
+        </div>
+
+        <!-- 其他登录方式 -->
+        <div class="other-login">
+            <div class="other-login-title">
+                <p>其他登录方式</p>
+            </div>
+
+            <div class="other-login-box">
+                <a><img src="../images/wechat.png" /></a>
+                <a><img src="../images/weibo.png" /></a>
+                <a><img src="../images/qq.png" /></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="regist">
+        <div class="error-msg">
+            <img src="../images/icon_jinb3.png" />
+            <span>请输入您的手机号</span>
+        </div>
+
+        <!-- 注册 -->
+        <div class="input-regist-box">
+            <ul class="regist-way-menu">
+                <li class="active">注册</li>
+            </ul>
+
+            <div class="phone-input">
+                <img src="../images/phone.png" />
+                <input type="text" placeholder="请输入登录账号" />
+            </div>
+
+            <div class="validate-input-box">
+                <div class="validate-input">
+                    <img src="../images/safe.png" />
+                    <input type="text" placeholder="请输入您的验证码" />
+                </div>
+                <a class="validate-num-btn">获取验证码</a>
+            </div>
+
+            <div class="password-input">
+                <img src="../images/lock.png" />
+                <input type="password" placeholder="请输入密码(6-30位且不含数字)" />
+            </div>
+
+            <div class="goto-regist-box">
+                <p class="agree-rules" data="1">
+                    <img src="../images/login_icon_box_s.png" />
+                    <span>我已阅读并同意</span>
+                    <a>《服务及隐私条例》</a>
+                    <input type="hidden" id="agreeRules" />
+                </p>
+            </div>
+
+            <a class="login-btn">注册</a>
+        </div>
+
+        <!-- 其他登录方式 -->
+        <div class="other-login">
+            <div class="other-login-title">
+                <p>其他登录方式</p>
+            </div>
+
+            <div class="other-login-box">
+                <a><img src="../images/wechat.png" /></a>
+                <a><img src="../images/weibo.png" /></a>
+                <a><img src="../images/qq.png" /></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="login">
+        <div class="error-msg">
+            <img src="../images/icon_jinb3.png" />
+            <span>请输入您的手机号</span>
+        </div>
+
+        <!-- 密码登录 -->
+        <div class="input-login">
+            <ul class="login-way-menu">
+                <li class="active">密码登陆</li>
+                <li>验证码登陆</li>
+            </ul>
+
+            <a class="qrcode-btn">
+                <img src="../images/qrcode_btn.png" />
+            </a>
+
+            <div class="phone-input">
+                <img src="../images/phone.png" />
+                <input type="text" placeholder="请输入登录账号" />
+            </div>
+
+            <div class="login-password-input password-input">
+                <img src="../images/lock.png" />
+                <input type="password" placeholder="请输入您的登录密码" />
+            </div>
+
+            <div class="login-validate-input validate-input-box">
+                <div class="validate-input">
+                    <img src="../images/safe.png" />
+                    <input type="text" placeholder="请输入您的验证码" />
+                </div>
+                <a class="validate-num-btn">获取验证码</a>
+            </div>
+
+            <div class="goto-regist-box">
+                <p>
+                    <span>没有账号？</span>
+                    <a class="goto-regist-btn">立即注册</a>
+                </p>
+                <a class="forget-password-btn">忘记密码</a>
+            </div>
+
+            <a class="login-btn">登录</a>
+        </div>
+
+        <!-- 二维码登陆 -->
+        <div class="qrcode-login-box">
+            <p class="goto-password-login">
+                <a>&lt;密码登录</a>
+                <span>扫码登录</span>
+            </p>
+            <img src="../images/qrcode.png" class="qrcode-img" />
+
+            <!-- 扫码成功显示 -->
+            <div class="qrcode-login-success">
+                <img src="../images/success.png" />
+                <p>扫码成功，请在手机上确认登录</p>
+            </div>
+
+            <div class="qrcode-goto-regist">
+                <p>打开微信、QQ或者微博扫一扫登录</p>
+                <p>
+                    <span>没有账号？</span>
+                    <a class="goto-regist-btn">立即注册</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- 其他登录方式 -->
+        <div class="other-login">
+            <div class="other-login-title">
+                <p>其他登录方式</p>
+            </div>
+
+            <div class="other-login-box">
+                <a><img src="../images/wechat.png" /></a>
+                <a><img src="../images/weibo.png" /></a>
+                <a><img src="../images/qq.png" /></a>
+            </div>
+        </div>
+    </div>
 </body>
+
+<script src="../lib/jquery/jquery-3.2.1.min.js"></script>
+<script src="../js/common.js"></script>
+<script>
+    $('.gift-list li').click(function() {
+        $('.gift-list li').removeClass('active');
+        $(this).addClass('active');
+    });
+
+    $('.send-gift-btn').click(function() {
+        $('.send-gift-message-box').slideDown('fast');
+        setTimeout(function() {
+            $('.send-gift-message-box').slideUp('fast');
+        }, 3000);
+    });
+
+    $('.open-login-btn a').click(function() {
+        commonPlugins.showModal('login', {});
+        afterShowLogin();
+    });
+
+    $('.open-regist-btn').click(function() {
+        commonPlugins.showModal('regist', {});
+        afterShowRegist();
+    });
+
+
+    // 未开通会员观看直播提示
+    // commonPlugins.alertModal({
+    //     title: '提示',
+    //     okTitle: '开通',
+    //     template: '<div class="alert-content-box"><img src="../images/ic_hint_02.png" /><p>本场赛事仅对会员用户开发，</p><p>请开通会员后观看~</p></div>'
+    // });
+
+    // 未登录发表评论提示
+    // $('.send-msg-btn').click(function() {
+    //     commonPlugins.alertModal({
+    //         okTitle: '去登录',
+    //         template: '<div class="alert-content-box"><img src="../images/ic_hint_03.png" /><p>请登录后再发表评论~</p></div>'
+    //     });
+    // });
+
+    // 禁言发表评论提示
+    $('.send-msg-btn').click(function() {
+        commonPlugins.alertModal({
+            template: '<div class="alert-content-box"><img src="../images/ic_hint_04.png" /><p>您已被管理员禁言，详情咨询客服~</p></div>'
+        });
+    });
+
+    // 未登录送礼提示
+    // $('.send-gift-btn').click(function() {
+    //     commonPlugins.alertModal({
+    //         okTitle: '去登录',
+    //         template: '<div class="alert-content-box"><img src="../images/ic_hint_03.png" /><p>登录才能赠送礼物哦~</p></div>'
+    //     });
+    // });
+
+    // 余额不足，送礼提示
+    // $('.send-gift-btn').click(function() {
+    //     commonPlugins.alertModal({
+    //         okTitle: '充值',
+    //         template: '<div class="alert-content-box"><img src="../images/ic_hint_05.png" /><p>金币不足，请充值后再赠送礼物~</p></div>'
+    //     });
+    // });
+
+    // 切换清晰度，非会员提示
+    $('.change-video-quality').click(function() {
+        commonPlugins.alertModal({
+            okTitle: '开通',
+            template: '<div class="alert-content-box"><img src="../images/ic_hint_02.png" /><p>请先开通会员再体验更高清晰度~</p></div>'
+        });
+    });
+
+    // 分享改造提示
+    $('.share-btn').click(function() {
+        commonPlugins.alertModal({
+            template: '<div class="alert-content-box"><img src="../images/ic_hint_01.png" /><p>一键分享功能升级改造中，敬请期待！</p><p>欢迎动动手指复制本网站地址给他人哦~</p></div>'
+        });
+    });
+
+    // 德州扑克app改造提示
+    $('.menu li:eq(0)').click(function() {
+        commonPlugins.alertModal({
+            template: '<div class="alert-content-box"><img src="../images/ic_hint_01.png" /><p>德州扑克APP改造中，敬请期待！</p></div>'
+        });
+    });
+
+
+    function afterShowLogin() {
+        $('.login-way-menu li').on('click', function() {
+            $('.login-way-menu li').removeClass('active');
+            $(this).addClass('active');
+
+            if ($(this).index() == 0) {
+                $('.login-password-input').show();
+                $('.login-validate-input').hide();
+            } else {
+                $('.login-password-input').hide();
+                $('.login-validate-input').show();
+            }
+        });
+
+        $('.qrcode-btn').on('click', function() {
+            $('.input-login').hide();
+            $('.qrcode-login-box').show();
+        });
+
+        $('.goto-password-login a').on('click', function() {
+            $('.input-login').show();
+            $('.qrcode-login-box').hide();
+        });
+
+
+
+        $('.goto-regist-btn').on('click', function() {
+            commonPlugins.closeModal();
+            commonPlugins.showModal('regist', {});
+            afterShowRegist();
+        });
+
+        $('.forget-password-btn').on('click', function() {
+            commonPlugins.closeModal();
+            commonPlugins.showModal('forgetpassword', {});
+            afterShowForgetPassword()
+        });
+    }
+
+    function afterShowRegist() {
+        $('.agree-rules').on('click', function() {
+            if ($(this).attr('data') == 1) {
+                $(this).attr('data', 0).find('img').attr('src', '../images/login_icon_box.png');
+                $(this).find('#agreeRules').val('0');
+            } else {
+                $(this).attr('data', 1).find('img').attr('src', '../images/login_icon_box_s.png');
+                $(this).find('#agreeRules').val('1');
+            }
+        });
+    }
+
+    function afterShowForgetPassword() {
+        $('.goto-login-box').on('click', function() {
+            commonPlugins.closeModal();
+            commonPlugins.showModal('login', {});
+            afterShowLogin();
+        });
+    }
+</script>
 
 </html>

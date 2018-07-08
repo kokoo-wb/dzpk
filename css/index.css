@@ -135,6 +135,7 @@
     position: relative;
     border-radius: 4px;
     margin: 0 11px;
+    cursor: pointer;
 }
 
 .gift-list li.active {
@@ -254,6 +255,14 @@
     font-size: 12px;
     word-break: break-all;
     position: relative;
+    height: 318px;
+    overflow: hidden;
+}
+
+.no-vip-tip {
+    text-align: center;
+    color: #49a7fe;
+    margin-top: 140px;
 }
 
 .chat-list ul {
@@ -293,6 +302,7 @@
 }
 
 .send-gift-message-box {
+    display: none;
     position: absolute;
     background: #fff;
     top: 10px;
@@ -469,4 +479,254 @@
 .game-intro {
     color: #5b6678;
     margin-top: 20px;
+}
+
+.error-msg {
+    z-index: 1000;
+    background: #fe4d49;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    text-align: center;
+    display: none;
+}
+
+.error-msg img {
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+}
+
+.regist-way-menu,
+.login-way-menu {
+    border-bottom: 4px solid #f5f5f5;
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    font-size: 16px;
+}
+
+.regist-way-menu li,
+.login-way-menu li {
+    float: left;
+    padding: 4px 0;
+    position: relative;
+    top: 4px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.regist-way-menu li:last-child,
+.login-way-menu li:last-child {
+    margin: 0
+}
+
+.regist-way-menu li.active,
+.login-way-menu li.active {
+    border-bottom: 4px solid #49a7fe;
+    color: #49a7fe;
+    padding: 0 0 10px 0;
+    font-size: 20px;
+}
+
+.qrcode-btn {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.qrcode-btn img {
+    width: 47px;
+    height: 47px;
+}
+
+.validate-input,
+.password-input,
+.phone-input {
+    margin-top: 70px;
+    width: 380px;
+    height: 50px;
+    border: 0;
+    background: #f7f7f7;
+    position: relative;
+    border-radius: 6px;
+}
+
+.validate-input img,
+.password-input img,
+.phone-input img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+}
+
+.validate-input input,
+.password-input input,
+.phone-input input {
+    font-size: 16px;
+    height: 50px;
+    margin-left: 55px;
+    background: none;
+    border: 0;
+    width: 300px;
+    outline: none;
+}
+
+.password-input {
+    margin-top: 25px;
+}
+
+.validate-input {
+    width: 280px;
+    float: left;
+    margin-top: 0;
+}
+
+.validate-input input {
+    width: 200px;
+}
+
+.login-validate-input {
+    display: none;
+}
+
+.validate-input-box {
+    overflow: hidden;
+    margin-top: 25px;
+}
+
+.validate-num-btn {
+    float: right;
+    display: block;
+    height: 40px;
+    width: 90px;
+    border: 1px solid #49a7fe;
+    color: #49a7fe;
+    text-align: center;
+    line-height: 40px;
+    margin-top: 4px;
+    border-radius: 4px;
+}
+
+.goto-regist-box {
+    margin-top: 16px;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+.goto-regist-box p {
+    float: left;
+}
+
+.goto-regist-box>a {
+    color: #666;
+    float: right;
+    cursor: pointer;
+}
+
+.goto-regist-box p a {
+    color: #49a7fe;
+    cursor: pointer;
+}
+
+.login-btn {
+    display: block;
+    height: 50px;
+    color: #fff;
+    background: #49a7fe;
+    line-height: 50px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.qrcode-login-box {
+    display: none;
+    text-align: center;
+}
+
+.goto-password-login {
+    position: relative;
+}
+
+.goto-password-login span {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+.goto-password-login a {
+    border: 1px solid #49a7fe;
+    color: #49a7fe;
+    position: absolute;
+    left: 0;
+    padding: 0 8px;
+    cursor: pointer;
+}
+
+.qrcode-img {
+    width: 150px;
+    height: 150px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.qrcode-login-success {
+    display: none;
+    margin-bottom: 50px;
+    margin-top: 80px;
+}
+
+.qrcode-login-success img {
+    margin-bottom: 15px;
+}
+
+.qrcode-goto-regist {
+    color: #666;
+}
+
+.qrcode-goto-regist a {
+    color: #49a7fe;
+    cursor: pointer;
+}
+
+.other-login-title {
+    border-bottom: 1px solid #e8e8e8;
+    margin-top: 40px;
+}
+
+.other-login-title p {
+    background: #fff;
+    width: 150px;
+    text-align: center;
+    position: relative;
+    top: 9px;
+    margin: 0 auto;
+}
+
+.other-login-box {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.other-login-box a {
+    margin: 0 26px;
+}
+
+.other-login-box a img {
+    width: 60px
+}
+
+.agree-rules img {
+    position: relative;
+    top: 2px;
+    cursor: pointer;
 }

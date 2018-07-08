@@ -22,7 +22,7 @@ body {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
-    min-width: 1220px;
+    min-width: 1260px;
     color: #333;
 }
 
@@ -65,56 +65,6 @@ table td {
     color: #666;
 }
 
-.select {
-    height: 30px;
-    border: 1px solid #fff;
-    position: relative;
-}
-
-.select:after {
-    content: '';
-    background-image: url('../images/updown.png');
-    background-repeat: no-repeat;
-    position: absolute;
-    right: 5px;
-    top: 8px;
-    width: 10px;
-    height: 15px;
-}
-
-.select .select-title {
-    line-height: 30px;
-    color: #fff;
-    padding: 10px;
-}
-
-.select ul {
-    color: rgba(0, 0, 0, 0.8);
-    position: absolute;
-    top: 32px;
-    right: 0;
-    z-index: 150;
-    background: #fff;
-    min-width: 100%;
-    display: none;
-    max-height: 280px;
-    overflow: auto;
-    box-shadow: 0px 1px 5px #999;
-    -webkit-box-shadow: 0px 1px 5px #999;
-    -moz-box-shadow: 0px 1px 5px #999;
-    -o-box-shadow: 0px 1px 5px #999;
-}
-
-.select ul li {
-    text-align: left;
-    padding: 10px 15px;
-    cursor: pointer;
-}
-
-.select ul li:hover {
-    background: #f1f1f1;
-}
-
 .modal {
     display: none;
 }
@@ -127,25 +77,28 @@ table td {
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1000;
+    overflow: auto;
 }
 
 .modal-content {
     position: absolute;
-    top: 150px;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100px;
+    width: 460px;
+    min-height: 400px;
     min-height: 100px;
     z-index: 1100;
+    border-radius: 6px;
+    background: #fff;
+    margin-bottom: 30px;
 }
 
 .modal-body {
-    background: #fff;
-    width: 300px;
-    min-height: 400px;
     margin: 0 auto;
     display: none;
     position: relative;
-    padding: 30px 10px 20px 10px;
+    padding: 40px;
 }
 
 .modal-close-btn {
@@ -160,71 +113,85 @@ table td {
     cursor: pointer;
 }
 
-.pagination {
-    padding: 15px 20px;
+.alert {
+    display: none;
 }
 
-.page-list {
-    float: left;
-}
-
-.pre-page,
-.next-page,
-.last-page {
-    margin-left: 10px;
-    cursor: pointer;
-}
-
-.page-item {
-    padding: 2px 0;
-    border: 1px solid #fff;
-    line-height: 1em;
-    margin-left: 5px;
-    display: inline-block;
-    min-width: 18px;
-    text-align: center;
-    cursor: pointer;
-}
-
-.page-active,
-.page-more {
-    border: 0
-}
-
-.page-size {
-    float: left;
-    width: 100px;
-    margin-left: 30px;
-}
-
-.page-size-select {
-    width: 60px;
-    float: left;
-}
-
-.page-size-select .select {
-    height: 19px;
-}
-
-.page-size-select .select:after {
-    right: 5px;
-    top: 3px;
-}
-
-.page-size-select .select-title {
-    line-height: 19px;
-    padding: 0 10px;
-}
-
-.page-size-select .select ul {
-    top: -120px;
+.alert-container {
+    position: fixed;
+    top: 0;
+    left: 0;
     right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
 }
 
-.page-size-select .select ul li {
-    padding: 5px 10px;
+.alert-content {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1100;
+    background: #fff;
+    width: 540px;
+    min-height: 430px;
+    display: none;
 }
 
-.page-size-unit {
-    margin-left: 5px;
+.alert-header {
+    height: 50px;
+    line-height: 50px;
+    background: #49a7fe;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+}
+
+.alert-body {
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 105px;
+}
+
+.alert-footer {
+    width: 100%;
+    position: absolute;
+    bottom: 40px;
+    text-align: center;
+}
+
+.alert-ok-btn {
+    height: 35px;
+    line-height: 35px;
+    display: block;
+    background: #49a7fe;
+    color: #fff;
+    display: inline-block;
+    padding: 0 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.alert-close-btn {
+    display: block;
+    height: 15px;
+    width: 15px;
+    background-image: url('../images/close_btn.png');
+    background-size: 15px;
+    position: absolute;
+    right: 13px;
+    top: 17px;
+    cursor: pointer;
+}
+
+.alert-content-box {
+    text-align: center;
+    font-size: 16px;
+    padding-top: 35px;
+}
+
+.alert-content-box p {
+    margin-top: 8px;
+    line-height: 16px;
 }
