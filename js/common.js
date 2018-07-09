@@ -58,7 +58,7 @@ var commonPlugins = function() {
         if (modalElement && $(modalElement).attr('class') == 'modal') {
             var top = $(modalElement).attr('top') || 100;
 
-            $('body').css('overflow', 'hidden').append('<div class="modal-container"></div>');
+            $('body').css('overflow', 'hidden').prepend('<div class="modal-container"></div>');
             $('.modal-container').append('<div class="modal-content" style="top: ' + top + 'px"></div>');
             $('.modal-content').append('<div class="modal-body"></div>');
             $('.modal-body').append($('#' + id).html());
