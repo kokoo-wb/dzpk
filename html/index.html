@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>首页</title>
+    <link rel="stylesheet" href="../lib/video/video.css" />
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/index_layout.css" />
+    <link rel="stylesheet" href="../css/video.css" />
     <link rel="stylesheet" href="../css/index.css" />
 
 
@@ -55,7 +57,7 @@
                     </div>
                 </div>
                 <div class="live-video">
-                    <video controls>
+                    <video class="videojs" id="video">
                         <source src="http://www.runoob.com/try/demo_source/movie.mp4" type="video/mp4"/>
                     </video>
                 </div>
@@ -479,8 +481,34 @@
 </body>
 
 <script src="../lib/jquery/jquery-3.2.1.min.js"></script>
+<script src="../lib/video/video.js"></script>
 <script src="../js/common.js"></script>
 <script>
+    videoJs('video').ready({
+        qualityArr: [{
+            name: '超清',
+            value: '1',
+            isVip: true
+        }, {
+            name: '高清',
+            value: '2',
+            isVip: true
+        }, {
+            name: '标清',
+            value: '3',
+            isVip: false
+        }],
+
+        selectQuality: function(value) {
+            alert(value);
+        }
+    });
+
+    setInterval(function() {
+        videoJs('video').setBarrage('我是弹幕');
+    }, 1000);
+
+
     $('.gift-list li').click(function() {
         $('.gift-list li').removeClass('active');
         $(this).addClass('active');
