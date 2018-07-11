@@ -130,3 +130,81 @@
     border-left: 1px solid #e8e8e8;
     float: left;
 }
+
+.pagination {
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.pagination ul {
+    overflow: hidden;
+    float: right;
+}
+
+.pagination ul li {
+    height: 28px;
+    line-height: 28px;
+    padding: 0 10px;
+    border: 1px solid #e8e8e8;
+    float: left;
+    margin-left: 10px;
+    min-width: 10px;
+    text-align: center;
+    border-radius: 4px;
+    color: #666;
+    cursor: pointer;
+}
+
+.pagination ul li img {
+    width: 8px;
+    height: 14px;
+    margin-top: 7px;
+}
+
+.pagination ul li.disabled {
+    opacity: 0.7;
+    cursor: inherit;
+    background: #f1f1f1;
+}
+
+.pagination ul li.active {
+    background: #49a7fe;
+    color: #fff;
+}
+
+.pagination ul li:active {
+    background: #49a7fe;
+    color: #fff;
+}
+
+.pre-page,
+.next-page,
+.pagination ul li.pre-page:active,
+.pagination ul li.next-page:active {
+    background-size: 8px 14px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.pre-page {
+    background-image: url('../images/arrow_left_black.png');
+}
+
+.pagination ul li.pre-page:active {
+    background-image: url('../images/arrow_left_white.png');
+}
+
+.next-page {
+    background-image: url('../images/arrow_right_black.png');
+}
+
+.pagination ul li.next-page:active {
+    background-image: url('../images/arrow_right_white.png');
+}
+
+.pagination ul li.disabled:active {
+    opacity: 0.7;
+    cursor: inherit;
+    background: #f1f1f1;
+    color: #666;
+}
