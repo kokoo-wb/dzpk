@@ -186,11 +186,35 @@
                 <p>您理解并认可，如果您通过第三方支付工具在斗鱼平台账户支付或充值购买斗鱼平台的收费服务（包括但不限于购买斗鱼平台内的虚拟礼物的使用权以及接受其他增值服务等各类收费项目）。斗鱼平台有权按需要修改或变更所提供的收费服务、收费标准、收费方式、服务费、及服务条款。斗鱼平台提供服务时，可能现在或日后对部分服务的用户开始收取一定的费用，如您拒绝支付该等费用，则不能在收费开始后继续使用相关的服务。如果您通过第三方支付工具在斗鱼平台账户支付或充值后可能产生的任何商业风险（包括但不限于不法分子利用您账户或银行卡等有价卡等进行违法活动），该等风险均有可能给您造成相应的经济损失，斗鱼在充分履行其在本协议项下义务和符合法律规定的前提下，不对您的前述风险和损失承担任何责任。</p>
             </div>
         </div>
+
+        <div class="modal" id="pay">
+            <div class="pay-modal-content">
+                <img class="oncancel close-btn" src="../images/close.png" />
+                <p class="pay-num-box">
+                    <span>支付宝扫码支付</span>
+                    <span>￥100</span>
+                </p>
+                <img class="qrcode-img" src="../images/qrcode.png">
+                <div class="pay-bottom">
+                    <img src="../images/scan.png" />
+                    <span>支付宝扫一扫支付</span>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
 <script src="../lib/jquery/jquery-3.2.1.min.js"></script>
+<script src="../js/common.js"></script>
 <script>
+    $('.submit-btn').click(function() {
+        commonPlugins.showModal('pay', {
+            onCancel: function() {
+                commonPlugins.closeModal();
+            }
+        });
+    });
+
     $('.tabs li').click(function() {
         $('.tabs li').removeClass('active');
         $(this).addClass('active');

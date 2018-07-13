@@ -196,11 +196,35 @@
                 </div>
             </div>
         </div>
+
+        <div class="modal" id="pay">
+            <div class="pay-modal-content">
+                <img class="oncancel close-btn" src="../images/close.png" />
+                <p class="pay-num-box">
+                    <span>支付宝扫码支付</span>
+                    <span>￥100</span>
+                </p>
+                <img class="qrcode-img" src="../images/qrcode.png">
+                <div class="pay-bottom">
+                    <img src="../images/scan.png" />
+                    <span>支付宝扫一扫支付</span>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
 <script src="../lib/jquery/jquery-3.2.1.min.js"></script>
+<script src="../js/common.js"></script>
 <script>
+    $('.submit-btn').click(function() {
+        commonPlugins.showModal('pay', {
+            onCancel: function() {
+                commonPlugins.closeModal();
+            }
+        });
+    });
+
     $('.tabs li').click(function() {
         $('.tabs li').removeClass('active');
         $(this).addClass('active');

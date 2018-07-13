@@ -222,3 +222,55 @@
     margin-top: 60px;
     cursor: pointer;
 }
+
+.pay-modal-content {
+    width: 100%;
+    height: 400px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.close-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.pay-num-box {
+    font-size: 20px;
+    text-align: center;
+    margin: 40px 0 20px 0;
+    font-weight: bold;
+}
+
+.pay-num-box span:last-child {
+    color: #e0b226;
+    margin-left: 5px;
+}
+
+.qrcode-img {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.pay-bottom {
+    background: #f1f1f1;
+    margin: 30px;
+    text-align: center;
+    line-height: 50px;
+    height: 50px;
+    position: relative;
+}
+
+.pay-bottom img {
+    float: left;
+    margin: 7px 10px 0 120px;
+}
+
+.pay-bottom span {
+    float: left;
+}

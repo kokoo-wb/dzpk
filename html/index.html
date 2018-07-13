@@ -56,9 +56,7 @@
                     </div>
                 </div>
                 <div class="live-video">
-                    <video class="videojs" id="video">
-                        <source src="http://www.runoob.com/try/demo_source/movie.mp4" type="video/mp4"/>
-                    </video>
+                    <video class="videojs" id="video"></video>
                 </div>
                 <div class="live-gift">
                     <ul class="gift-list">
@@ -480,9 +478,21 @@
 </body>
 
 <script src="../lib/jquery/jquery-3.2.1.min.js"></script>
+<script src="../lib/flv/flv.min.js"></script>
 <script src="../lib/video/video.js"></script>
 <script src="../js/common.js"></script>
 <script>
+    if (flvjs.isSupported()) {
+        var videoElement = document.getElementById('video');
+        var flvPlayer = flvjs.createPlayer({
+            type: 'flv',
+            url: 'http://1255985724.vod2.myqcloud.com/d3ed96afvodgzp1255985724/786070447447398156847984557/f0.flv'
+        });
+        flvPlayer.attachMediaElement(videoElement);
+        flvPlayer.load();
+        flvPlayer.play();
+    }
+
     videoJs('video').ready({
         qualityArr: [{
             name: '超清',
