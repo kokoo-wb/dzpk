@@ -4,12 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <title>首页</title>
-    <link rel="stylesheet" href="../lib/video/video.css" />
+    <link rel="stylesheet" href="../lib/videojs/video-js.css" />
+    <link rel="stylesheet" href="../lib/videojs/video-theme.css" />
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/index_layout.css" />
     <link rel="stylesheet" href="../css/index.css" />
-
-
 </head>
 
 <body>
@@ -56,7 +55,7 @@
                     </div>
                 </div>
                 <div class="live-video">
-                    <video class="videojs" id="video"></video>
+                    <video id="videojs-flvjs-player" class="video-js vjs-default-skin vjs-big-play-centered"></video>
                 </div>
                 <div class="live-gift">
                     <ul class="gift-list">
@@ -478,22 +477,51 @@
 </body>
 
 <script src="../lib/jquery/jquery-3.2.1.min.js"></script>
-<script src="../lib/flv/flv.min.js"></script>
-<script src="../lib/video/video.js"></script>
+<script src="../lib/videojs/video.min.js"></script>
+<script src="../lib/videojs/flv.min.js"></script>
+<script src="../lib/videojs/videojs-flvjs.min.js"></script>
+<script src="../lib/videojs/video-feature.js"></script>
 <script src="../js/common.js"></script>
-<script>
-    if (flvjs.isSupported()) {
-        var videoElement = document.getElementById('video');
-        var flvPlayer = flvjs.createPlayer({
-            type: 'flv',
-            url: 'http://1255985724.vod2.myqcloud.com/d3ed96afvodgzp1255985724/786070447447398156847984557/f0.flv'
-        });
-        flvPlayer.attachMediaElement(videoElement);
-        flvPlayer.load();
-        flvPlayer.play();
-    }
 
-    videoJs('video').ready({
+<script>
+    var flvUrl = '../video/demo.flv';
+
+    var player = videojs('videojs-flvjs-player', {
+        techOrder: ['html5', 'flvjs'],
+        flvjs: {
+            mediaDataSource: {
+                isLive: false,
+                cors: true,
+                withCredentials: false,
+            },
+        },
+        sources: [{
+            src: flvUrl,
+            type: 'video/x-flv'
+        }],
+        controls: true,
+        preload: 'preload',
+        autoplay: 'autoplay'
+    }, function onPlayerReady() {
+        console.log('player ready')
+
+        player.on('error', function(err) {
+            console.log('first source load fail')
+
+            player.src({
+                src: flvUrl,
+                type: 'video/x-flv'
+            });
+
+            player.ready(function() {
+                console.log('player ready')
+                player.load();
+                player.play();
+            });
+        })
+    });
+
+    myVideoJs('video').ready({
         qualityArr: [{
             name: '超清',
             value: '1',
@@ -514,7 +542,7 @@
     });
 
     setInterval(function() {
-        videoJs('video').setBarrage('我是弹幕');
+        myVideoJs('video').setBarrage('我是弹幕');
     }, 1000);
 
 
