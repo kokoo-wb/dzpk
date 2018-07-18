@@ -474,6 +474,53 @@
             </div>
         </div>
     </div>
+
+    <div class="modal" id="bindphone">
+        <div class="error-msg">
+            <img src="../images/icon_jinb3.png" />
+            <span>请输入您的手机号</span>
+        </div>
+
+        <!-- 手机绑定 -->
+        <div class="input-regist-box">
+            <ul class="regist-way-menu">
+                <li class="active">绑定手机号</li>
+            </ul>
+
+            <span class="cancel-bind-btn oncancel">取消</span>
+
+            <p class="bind-phone-desc">为方便使用，还请绑定您的手机号：</p>
+
+            <div class="phone-input bindphone-input">
+                <img src="../images/phone.png" />
+                <input type="text" placeholder="请输入手机号" />
+            </div>
+
+            <div class="validate-input-box">
+                <div class="validate-input">
+                    <img src="../images/safe.png" />
+                    <input type="text" placeholder="请输入验证码" />
+                </div>
+                <a class="validate-num-btn">获取验证码</a>
+            </div>
+
+            <div class="password-input">
+                <img src="../images/lock.png" />
+                <input type="password" placeholder="请输入密码(6-30位且不含空格)" />
+            </div>
+
+            <div class="goto-regist-box">
+                <p class="agree-rules" data="1">
+                    <img src="../images/login_icon_box_s.png" />
+                    <span>我已阅读并同意</span>
+                    <a>《服务及隐私条例》</a>
+                    <input type="hidden" id="agreeRules" />
+                </p>
+            </div>
+
+            <a class="login-btn onok">注册</a>
+        </div>
+    </div>
 </body>
 
 <script src="../lib/jquery/jquery-3.2.1.min.js"></script>
@@ -557,6 +604,22 @@
             $('.send-gift-message-box').slideUp('fast');
         }, 3000);
     });
+
+
+    /* 不知道放哪里触发, 这个请放在你需要的位置触发 */
+    commonPlugins.showModal('bindphone', {
+        onOk: function() {
+            // 测试取表单的值， 建议用ajax去提交modal表单
+            console.log('登陆账号：', $('#loginUserName').val());
+            console.log('登陆密码：', $('#loginPassword').val());
+        },
+        onCancel: function() {
+            commonPlugins.closeModal();
+        }
+    });
+    afterBindPhone();
+    // ---------------------------------------------
+
 
     $('.open-login-btn a').click(function() {
         commonPlugins.showModal('login', {
@@ -672,6 +735,18 @@
             commonPlugins.closeModal();
             commonPlugins.showModal('forgetpassword', {});
             afterShowForgetPassword()
+        });
+    }
+
+    function afterBindPhone() {
+        $('.agree-rules').on('click', function() {
+            if ($(this).attr('data') == 1) {
+                $(this).attr('data', 0).find('img').attr('src', '../images/login_icon_box.png');
+                $(this).find('#agreeRules').val('0');
+            } else {
+                $(this).attr('data', 1).find('img').attr('src', '../images/login_icon_box_s.png');
+                $(this).find('#agreeRules').val('1');
+            }
         });
     }
 

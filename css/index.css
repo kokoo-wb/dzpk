@@ -736,3 +736,21 @@
     top: 2px;
     cursor: pointer;
 }
+
+.cancel-bind-btn {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    font-size: 15px;
+    color: #999;
+    cursor: pointer;
+}
+
+.bind-phone-desc {
+    margin-top: 70px;
+    color: #999;
+}
+
+.bindphone-input {
+    margin-top: 20px;
+}
