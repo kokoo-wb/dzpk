@@ -329,6 +329,7 @@ button {
     width: 50px;
     margin: 0 auto;
     position: relative;
+    cursor: pointer;
 }
 
 .quality-select-vip::before {

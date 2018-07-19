@@ -22,6 +22,9 @@
     width: 60px;
     border: 1px solid #e8e8e8;
     border-radius: 100px;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -o-border-radius: 100px;
     margin: 8px 0 0 20px;
 }
 
@@ -53,6 +56,9 @@
     float: left;
     padding: 0 5px;
     border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
     display: block;
     height: 20px;
     line-height: 20px;
@@ -753,4 +759,12 @@
 
 .bindphone-input {
     margin-top: 20px;
+}
+
+.bind-phone-exist {
+    margin-top: 15px;
+    display: block;
+    color: #49a7fe;
+    text-align: center;
+    cursor: pointer;
 }
