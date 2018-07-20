@@ -347,3 +347,120 @@ button {
 .quality-select-item:last-child {
     border-bottom: 0;
 }
+
+
+/*flash版本*/
+
+.vjs-icon-pause:before,
+.video-js .vjs-play-control.vjs-playing:before {
+    content: ' ';
+    display: block;
+    width: 15px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    left: 20px;
+    top: 18px;
+    background-image: url('images/video_play.png');
+}
+
+.vjs-icon-play:before,
+.video-js .vjs-play-control:before {
+    content: ' ';
+    display: block;
+    width: 15px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    left: 20px;
+    top: 18px;
+    background-image: url('images/video_pause.png');
+}
+
+.vjs-icon-fullscreen-enter:before,
+.video-js .vjs-fullscreen-control:before {
+    content: ' ';
+    position: absolute;
+    left: 5px;
+    top: 16px;
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url('images/fullscreen.png');
+}
+
+.vjs-icon-fullscreen-exit:before,
+.video-js.vjs-fullscreen .vjs-fullscreen-control:before {
+    content: ' ';
+    position: absolute;
+    left: 5px;
+    top: 16px;
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url('images/not_fullscreen.png');
+}
+
+.vjs-icon-volume-high:before,
+.video-js .vjs-mute-control:before,
+.video-js .vjs-volume-menu-button:before,
+.vjs-icon-volume-low:before,
+.video-js .vjs-mute-control.vjs-vol-1:before,
+.video-js .vjs-volume-menu-button.vjs-vol-1:before,
+.vjs-icon-volume-mid:before,
+.video-js .vjs-mute-control.vjs-vol-2:before,
+.video-js .vjs-volume-menu-button.vjs-vol-2:before {
+    content: ' ';
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 16px;
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url('images/voice_on.png');
+}
+
+.video-js .vjs-mute-control,
+.video-js .vjs-volume-menu-button {
+    position: absolute;
+    right: 65px;
+    top: 0;
+    width: 100px !important;
+}
+
+.vjs-icon-volume-mute:before,
+.video-js .vjs-mute-control.vjs-vol-0:before,
+.video-js .vjs-volume-menu-button.vjs-vol-0:before {
+    content: ' ';
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 16px;
+    width: 18px;
+    height: 21px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url('images/voice_off.png');
+}
+
+.vjs-menu-button-inline .vjs-menu {
+    opacity: 1;
+}
+
+.vjs-volume-bar.vjs-slider-horizontal {
+    margin-top: 23px;
+}
+
+.vjs-menu-button-inline .vjs-menu {
+    left: 30px;
+}
+
+.vjs-menu .vjs-menu-content {
+    overflow: inherit;
+}
