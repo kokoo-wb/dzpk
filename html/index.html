@@ -635,10 +635,18 @@
             isVip: false
         }],
 
-        userIsVip: true,
+        userIsVip: false,
 
         selectQuality: function(value) {
             alert(value);
+
+            player.pause();
+            player.src({
+                src: flvUrl,
+                type: 'video/x-flv'
+            });
+            player.load();
+            player.play();
         }
     });
 
