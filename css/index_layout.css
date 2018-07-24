@@ -17,14 +17,15 @@ body {
 }
 
 .logo {
-    width: 160px;
-    height: 90px;
-    background: #49a7fe;
-    color: #fff;
+    width: 210px;
+    height: 118px;
     float: left;
     font-size: 34px;
     text-align: center;
     line-height: 90px;
+    background-image: url('../images/logo.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 .menu {

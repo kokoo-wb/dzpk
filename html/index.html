@@ -22,7 +22,7 @@
 <body>
     <div class="header">
         <div class="header-content">
-            <div class="logo">LOGO</div>
+            <div class="logo"></div>
             <ul class="menu">
                 <li>德州扑克</li>
                 <li>首页</li>
@@ -69,33 +69,73 @@
                     <ul class="gift-list">
                         <li class="active">
                             <img src="../images/rose_flower.png" />
+                            <div>
+                                <p>玫瑰</p>
+                                <p>30币</p>
+                            </div>
                         </li>
                         <li>
                             <img src="../images/kiss.png" />
+                            <div>
+                                <p>Kiss</p>
+                                <p>30币</p>
+                            </div>
                         </li>
                         <li>
                             <img src="../images/love_dulces.png" />
+                            <div>
+                                <p>Kiss</p>
+                                <p>30币</p>
+                            </div>
                         </li>
                         <li>
                             <img src="../images/candy.png" />
+                            <div>
+                                <p>Kiss</p>
+                                <p>30币</p>
+                            </div>
                         </li>
                         <li>
                             <img src="../images/rose_heart.png" />
+                            <div>
+                                <p>Kiss</p>
+                                <p>30币</p>
+                            </div>
                         </li>
                         <li>
                             <img src="../images/crown.png" />
+                            <div>
+                                <p>Kiss</p>
+                                <p>30币</p>
+                            </div>
                         </li>
                         <li>
-                            <img src="../images/helicopter.png" />
+                            <img src="../images/helicopter.png" />、
+                            <div>
+                                <p>Kiss</p>
+                                <p>30币</p>
+                            </div>
                         </li>
                         <li>
                             <img src="../images/ring.png" />
+                            <div>
+                                <p>Kiss</p>
+                                <p>30币</p>
+                            </div>
                         </li>
                         <li>
                             <img src="../images/daimand.png" />
+                            <div>
+                                <p>Kiss</p>
+                                <p>30币</p>
+                            </div>
                         </li>
                         <li>
                             <img src="../images/car.png" />
+                            <div>
+                                <p>Kiss</p>
+                                <p>30币</p>
+                            </div>
                         </li>
                     </ul>
                     <a class="send-gift-btn">赠送</a>
@@ -137,7 +177,7 @@
                     <div class="chat-list">
                         <ul>
                             <li>
-                                <span class="chat-username">蜡笔小新</span>
+                                <span class="chat-username" onclick="showUserInfo('鱼子酱', '../images/home_ic_vip.png')">蜡笔小新</span>
                                 <span class="chat-split">：</span>
                                 <span>good!</span>
                             </li>
@@ -204,6 +244,11 @@
                                 <span>666</span>
                             </li>
                         </ul>
+
+                        <div class="user-info">
+                            <img src="" />
+                            <p></p>
+                        </div>
 
                         <!-- 没开通vip时候的提示 -->
                         <!-- <div class="no-vip-tip">请开通会员后参与本次的直播交流</div> -->
@@ -835,6 +880,16 @@
             commonPlugins.showModal('login', {});
             afterShowLogin();
         });
+    }
+
+    function showUserInfo(userName, userImage) {
+        $('.user-info img').attr('src', userImage);
+        $('.user-info p').text(userName);
+        $('.user-info').fadeIn();
+
+        setTimeout(function() {
+            $('.user-info').fadeOut();
+        }, 2000);
     }
 </script>
 

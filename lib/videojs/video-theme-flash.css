@@ -8,6 +8,7 @@ button {
     line-height: 2.5em;
     background: rgba(0, 0, 0, 0.7);
     border-radius: 100px;
+    display: none;
 }
 
 .video-js .vjs-control-bar {
