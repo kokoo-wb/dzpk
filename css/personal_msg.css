@@ -176,9 +176,8 @@
     width: 6px;
     height: 6px;
     background: #49a7fe;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 5px;
+    left: 5px;
 }
 
 .form-item .gender-radio {

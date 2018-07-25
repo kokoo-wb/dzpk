@@ -116,9 +116,20 @@
 
 .pay-way a img {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+}
+
+.wechat-pay img {
+    width: 92px;
+    height: 26px;
+    top: 14px;
+    left: 34px;
+}
+
+.zfb-pay img {
+    width: 78px;
+    height: 26px;
+    top: 14px;
+    left: 41px;
 }
 
 .submit-btn {
