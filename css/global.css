@@ -26,6 +26,11 @@ body {
     color: #333;
 }
 
+::-ms-clear,
+::-ms-reveal {
+    display: none;
+}
+
 ul {
     list-style-type: none;
     padding: 0;
@@ -34,6 +39,7 @@ ul {
 
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 table {

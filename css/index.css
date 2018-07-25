@@ -91,6 +91,7 @@
     color: #fff;
     background: linear-gradient(to top, #49a7fe, #fff);
     background-color: #49a7fe;
+    cursor: pointer;
 }
 
 .live-op-btn a:last-child {
@@ -102,6 +103,7 @@
     color: #49a7fe;
     margin-left: 10px;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .live-video {
@@ -198,6 +200,7 @@
     font-size: 12px;
     text-align: center;
     line-height: 28px;
+    cursor: pointer;
 }
 
 .live-box-right {
@@ -208,7 +211,7 @@
 .gift-send-rank-box {
     width: 290px;
     background: #fff;
-    height: 364px;
+    height: 314px;
 }
 
 .right-title {
@@ -225,7 +228,7 @@
 
 .rank-list li {
     overflow: hidden;
-    height: 60px;
+    height: 50px;
 }
 
 .rank-num {
@@ -237,7 +240,7 @@
     height: 20px;
     text-align: center;
     line-height: 20px;
-    margin-top: 18px;
+    margin-top: 13px;
 }
 
 .rank-list li:nth-child(1) .rank-num {
@@ -260,15 +263,15 @@
 
 .rank-list li img {
     float: left;
-    height: 46px;
-    width: 46px;
+    height: 40px;
+    width: 40px;
     border: 1px solid #e8e8e8;
     border-radius: 100px;
-    margin: 6px 5px 0 16px;
+    margin: 4px 5px 0 16px;
 }
 
 .rank-list li span {
-    line-height: 60px;
+    line-height: 50px;
     display: block;
     width: 150px;
     overflow: hidden;
@@ -280,7 +283,7 @@
 .chat-box {
     width: 290px;
     background: #fff;
-    height: 416px;
+    height: 466px;
     margin-top: 10px;
 }
 
@@ -289,7 +292,7 @@
     font-size: 12px;
     word-break: break-all;
     position: relative;
-    height: 318px;
+    height: 368px;
     overflow: hidden;
 }
 
@@ -300,7 +303,7 @@
 }
 
 .chat-list ul {
-    height: 318px;
+    height: 368px;
     padding: 10px 0;
     color: #666;
     overflow: auto;
@@ -420,6 +423,7 @@
     text-align: center;
     width: 50px;
     margin-left: 10px;
+    cursor: pointer;
 }
 
 .theme-split {
@@ -755,10 +759,12 @@
 
 .other-login-box a {
     margin: 0 26px;
+    display: inline-block;
 }
 
 .other-login-box a img {
-    width: 60px
+    width: 60px;
+    border: 0;
 }
 
 .agree-rules img {
