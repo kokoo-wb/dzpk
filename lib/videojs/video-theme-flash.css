@@ -224,24 +224,27 @@ button {
     }
 }
 
-.video-barrage-btn {
+.video-barrage-control {
     position: absolute;
     right: 190px;
     top: 15px;
-    width: 36px;
-    height: 20px;
-    border-radius: 100px;
-    cursor: pointer;
 }
 
-.video-barrage-btn::before {
-    content: '弹幕';
+.video-barrage-control span {
     color: rgba(255, 255, 255, 0.6);
     position: absolute;
     border-radius: 50px;
     display: block;
-    top: 4px;
+    top: 5px;
     left: -35px;
+}
+
+.video-barrage-btn {
+    width: 36px;
+    height: 20px;
+    border-radius: 100px;
+    cursor: pointer;
+    position: relative;
 }
 
 .video-barrage-close {
