@@ -13,7 +13,6 @@
 .logo {
     width: 210px;
     height: 118px;
-    color: #fff;
     float: left;
     font-size: 34px;
     text-align: center;
@@ -56,6 +55,7 @@
     float: left;
     margin-top: 20px;
     margin-right: 7px;
+    cursor: pointer;
 }
 
 .login-info span {

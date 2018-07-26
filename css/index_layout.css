@@ -61,6 +61,7 @@ body {
     float: left;
     margin-top: 20px;
     margin-right: 7px;
+    cursor: pointer;
 }
 
 .login-info span {

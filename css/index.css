@@ -181,9 +181,10 @@
 
 .gift-list li img {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 38px;
+    height: 38px;
+    left: 11px;
+    top: 11px;
 }
 
 .send-gift-btn {
@@ -211,7 +212,7 @@
 .gift-send-rank-box {
     width: 290px;
     background: #fff;
-    height: 314px;
+    height: 264px;
 }
 
 .right-title {
@@ -223,7 +224,9 @@
 }
 
 .rank-list {
+    height: 200px;
     padding: 7px 20px;
+    overflow: auto;
 }
 
 .rank-list li {
@@ -273,7 +276,7 @@
 .rank-list li span {
     line-height: 50px;
     display: block;
-    width: 150px;
+    width: 140px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -283,7 +286,7 @@
 .chat-box {
     width: 290px;
     background: #fff;
-    height: 466px;
+    height: 516px;
     margin-top: 10px;
 }
 
@@ -292,7 +295,7 @@
     font-size: 12px;
     word-break: break-all;
     position: relative;
-    height: 368px;
+    height: 418px;
     overflow: hidden;
 }
 

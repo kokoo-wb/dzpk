@@ -64,14 +64,16 @@ var commonPlugins = function() {
             $('.modal-body').append($('#' + id).html());
             $('.modal-body').fadeIn('fast');
 
-            $('.modal-container').click(function(event) {
-                var e = e || window.event,
-                    target = e.target || e.srcElement;
+            if (!obj.blurNotClose) {
+                $('.modal-container').click(function(event) {
+                    var e = e || window.event,
+                        target = e.target || e.srcElement;
 
-                if ($(target).attr('class') == 'modal-content' || $(target).attr('class') == 'modal-container') {
-                    closeModal();
-                }
-            });
+                    if ($(target).attr('class') == 'modal-content' || $(target).attr('class') == 'modal-container') {
+                        closeModal();
+                    }
+                });
+            }
 
             if (obj && obj.onOk) {
                 $('.onok').on('click', function() {
