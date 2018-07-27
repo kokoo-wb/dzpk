@@ -478,3 +478,7 @@ button {
     position: absolute !important;
     left: 0;
 }
+
+.vjs-full-window .vjs-fullscreen.video-js {
+    position: fixed !important;
+}

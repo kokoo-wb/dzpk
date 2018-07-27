@@ -1,3 +1,14 @@
+.banner {
+    width: 1260px;
+    margin-bottom: 20px;
+    height: 295px;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+}
+
 .live-box-content {
     overflow: hidden;
 }
@@ -350,7 +361,7 @@
     width: 265px;
     border: 1px solid #fe8f52;
     left: 50%;
-    transform: translateX(-50%);
+    margin-left: -133px;
     height: 56px;
     border-radius: 8px;
     box-shadow: 0 10px 10px rgba(205, 52, 39, 0.2)
@@ -606,7 +617,7 @@
 .phone-input img {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    margin-top: -10px;
     left: 20px;
 }
 
