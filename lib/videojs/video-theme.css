@@ -179,9 +179,13 @@ button {
     color: #fff;
     position: absolute;
     right: -360px;
-    width: 300px;
+    width: 400px;
     font-size: 18px;
     letter-spacing: 2px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
     animation: barrage 17s forwards linear;
     -moz-animation: barrage 17s forwards linear;
     -webkit-animation: barrage 17s forwards linear;
@@ -190,7 +194,7 @@ button {
 
 @keyframes barrage {
     from {
-        right: -300px;
+        right: -400px;
     }
     to {
         right: 100%;
@@ -199,7 +203,7 @@ button {
 
 @-moz-keyframes barrage {
     from {
-        right: -300px;
+        right: -400px;
     }
     to {
         right: 100%;
@@ -208,7 +212,7 @@ button {
 
 @-webkit-keyframes barrage {
     from {
-        right: -300px;
+        right: -400px;
     }
     to {
         right: 100%;
@@ -217,7 +221,7 @@ button {
 
 @-o-keyframes barrage {
     from {
-        right: -300px;
+        right: -400px;
     }
     to {
         right: 100%;

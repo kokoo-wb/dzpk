@@ -650,7 +650,10 @@
         preload: 'preload',
         autoplay: 'autoplay'
     }, function onPlayerReady() {
-        console.log('player ready')
+        console.log('player ready');
+        var defaultVolume = localStorage.getItem('volume');
+
+        player.volume(defaultVolume || 1);
 
         player.on('error', function(err) {
             console.log('first source load fail')
@@ -665,25 +668,41 @@
                 player.load();
                 player.play();
             });
-        })
+
+            player.volume(defaultVolume || 1);
+        });
+
+        player.on('volumechange', function(e) {
+            localStorage.setItem('volume', player.volume());
+        });
+
+        player.on('volumechange', function(e) {
+            var setVolumeValue = player.muted() ? 0 : player.volume()
+            localStorage.setItem('volume', setVolumeValue);
+        });
     });
 
     myVideoJs('my-video').ready({
         qualityArr: [{
             name: '超清',
             value: '1',
-            isVip: true
+            isVip: true,
+            default: localStorage.getItem('defaultQuality') == '1'
         }, {
             name: '高清',
             value: '2',
-            isVip: true
+            isVip: true,
+            default: localStorage.getItem('defaultQuality') == '2'
         }, {
             name: '标清',
             value: '3',
-            isVip: false
+            isVip: false,
+            default: localStorage.getItem('defaultQuality') == '3'
         }],
 
         userIsVip: false,
+
+        isOpenBarrage: localStorage.getItem('isOpenBarrage'),
 
         selectQuality: function(value) {
             alert(value);

@@ -1,7 +1,6 @@
 .banner {
     width: 100%;
     overflow: hidden;
-    margin-bottom: 10px;
 }
 
 .banner img {
@@ -316,7 +315,7 @@
 }
 
 .chat-list ul {
-    height: 368px;
+    height: 418px;
     padding: 10px 0;
     color: #666;
     overflow: auto;
