@@ -15,7 +15,7 @@
     width: 960px;
     float: left;
     background: #fff;
-    height: 790px;
+    height: 722px;
 }
 
 .live-header {
@@ -118,7 +118,7 @@
 .live-video {
     width: 960px;
     border-bottom: 1px solid #e8e8e8;
-    height: 608px;
+    height: 540px;
     background: #000;
     position: relative;
 }
@@ -295,7 +295,7 @@
 .chat-box {
     width: 290px;
     background: #fff;
-    height: 516px;
+    height: 448px;
     margin-top: 10px;
 }
 
@@ -304,7 +304,7 @@
     font-size: 12px;
     word-break: break-all;
     position: relative;
-    height: 418px;
+    height: 350px;
     overflow: hidden;
 }
 
@@ -315,7 +315,7 @@
 }
 
 .chat-list ul {
-    height: 418px;
+    height: 350px;
     padding: 10px 0;
     color: #666;
     overflow: auto;
