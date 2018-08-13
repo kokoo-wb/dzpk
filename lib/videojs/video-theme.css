@@ -166,7 +166,7 @@ button {
 
 .video-barrage {
     width: 100%;
-    height: 350px !important;
+    height: 480px !important;
     position: absolute;
     top: 0;
     left: 0;
@@ -317,6 +317,7 @@ button {
     color: #fff;
     padding: 10px 0;
     display: none;
+    z-index: 101;
 }
 
 .video-quality-select::after {
